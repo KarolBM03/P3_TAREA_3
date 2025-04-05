@@ -58,6 +58,15 @@ function eliminarEmpleado(index) {
     renderEmpleados();
 }
 
+// Función para editar empleado
+function editarEmpleado(index) {
+    const empleado = empleados[index];
+    nombreInput.value = empleado.nombre;
+    puestoInput.value = empleado.puesto;
+    editando = true;
+    idEmpleadoEditando = index;
+}
+
 // Función para guardar empleados en localStorage
 function guardarEnLocalStorage() {
     localStorage.setItem('empleados', JSON.stringify(empleados));
