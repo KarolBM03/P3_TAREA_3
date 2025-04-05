@@ -67,6 +67,15 @@ function editarEmpleado(index) {
     idEmpleadoEditando = index;
 }
 
+// Botón para limpiar formulario
+const btnLimpiar = document.getElementById('btnLimpiar');
+
+btnLimpiar.addEventListener('click', () => {
+    formulario.reset();
+    editando = false;
+    idEmpleadoEditando = null;
+});
+
 // Función para guardar empleados en localStorage
 function guardarEnLocalStorage() {
     localStorage.setItem('empleados', JSON.stringify(empleados));
