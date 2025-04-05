@@ -52,6 +52,11 @@ formulario.addEventListener('submit', function (e) {
     renderEmpleados();
 });
 
+// Función para eliminar empleado
+function eliminarEmpleado(index) {
+    empleados.splice(index, 1);
+    renderEmpleados();
+}
 
 // Función para guardar empleados en localStorage
 function guardarEnLocalStorage() {
